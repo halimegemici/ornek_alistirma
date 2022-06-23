@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dropdown Menu </title>
+        <!--Halime Gemici gururla sunar...-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="dropdown">        
+            <p class="soru">En sevdiğiniz mevsim nedir?</p>
+            <input type="text" class="textBox" placeholder="Seçin">
+            <div class="option">
+                <div onclick="show('İlkbahar')"><ion-icon name="flower-outline"></ion-icon> İlkbahar</div>
+                <div onclick="show('Yaz')"><ion-icon name="sunny-outline"></ion-icon> Yaz</div>
+                <div onclick="show('Sonbahar')"><ion-icon name="leaf-outline"></ion-icon> Sonbahar</div>
+                <div onclick="show('Kış')"><ion-icon name="snow-outline"></ion-icon> Kış</div>
+            </div>
+        </div>
+        <div class="dropdown2">        
+            <p class="soru2">Favori sporunuz nedir?</p>
+            <input type="text" class="textBox2" placeholder="Seçin">
+            <div class="option2">
+                <div onclick="show2('Futbol')"><ion-icon name="football-outline"></ion-icon> Futbol</div>
+                <div onclick="show2('Basketbol')"><ion-icon name="basketball-outline"></ion-icon> Basketbol</div>
+                <div onclick="show2('Tenis')"><ion-icon name="tennisball-outline"></ion-icon> Tenis</div>
+                <div onclick="show2('Beyzbol')"><ion-icon name="baseball-outline"></ion-icon> Beyzbol</div>
+            </div>
+        </div>
+        <div class="dropdown3">        
+            <p class="soru3">İlgi alanınız nedir?</p>
+            <input type="text" class="textBox3" placeholder="Seçin">
+            <div class="option3">
+                <div onclick="show3('Resim yapmak')"><ion-icon name="color-palette-outline"></ion-icon> Resim yapmak</div>
+                <div onclick="show3('Oyun oynamak')"><ion-icon name="game-controller-outline"></ion-icon> Oyun oynamak</div>
+                <div onclick="show3('Müzik dinlemek')"><ion-icon name="musical-notes-outline"></ion-icon> Müzik dinlemek</div>
+                <div onclick="show3('Kitap okumak')"><ion-icon name="book-outline"></ion-icon> Kitap okumak</div>
+            </div>
+        </div>
+        
+
+        <!--js-->
+        <script>
+            function show(anything){
+                document.querySelector('.textBox').value = 
+                anything;
+            }
+
+            let dropdown = document.querySelector('.dropdown');
+            dropdown.onclick = function(){
+                dropdown.classList.toggle('active');
+            }
+
+            function show2(anything){
+                document.querySelector('.textBox2').value = 
+                anything;
+            }
+
+            let dropdown2 = document.querySelector('.dropdown2');
+            dropdown2.onclick = function(){
+                dropdown2.classList.toggle('active');
+            }
+        
+            function show3(anything){
+                document.querySelector('.textBox3').value = 
+                anything;
+            }
+
+            let dropdown3 = document.querySelector('.dropdown3');
+            dropdown3.onclick = function(){
+                dropdown3.classList.toggle('active');
+            }
+        </script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
